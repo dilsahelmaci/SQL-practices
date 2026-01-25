@@ -1,6 +1,6 @@
 # **Users Who Confirmed on the Second Day**
 
-### **Problem Overview**
+## **Problem Overview**
 
 Assume you're given tables with information about TikTok user sign-ups and confirmations through email and text. New users on TikTok sign up using their email addresses, and upon sign-up, each user receives a text message confirmation to activate their account.
 
@@ -11,7 +11,7 @@ Definition:
 <img width="350" alt="image" src="https://github.com/user-attachments/assets/6fe80db7-4c42-46fa-b5b3-9673ad1e7371" />
 
 ---
-### **Solution**
+## **Solution**
 
 ```sql
 SELECT DISTINCT user_id

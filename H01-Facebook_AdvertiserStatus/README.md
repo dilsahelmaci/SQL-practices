@@ -1,6 +1,6 @@
 # **User Status Classification for Facebook Advertisers**
 
-### **Problem Overview**
+## **Problem Overview**
 
 You are provided with two tables:
 
@@ -9,7 +9,7 @@ You are provided with two tables:
 
 The task is to update the payment status of advertisers based on the information in the **daily_pay** table. Specifically, the output should include the **user_id** and their updated payment status (**new_status**), sorted by **user_id**.
 
-## **Advertiser Status Categories**
+### **Advertiser Status Categories**
 
 The payment status of advertisers can be classified into four categories:
 1.	**New**: Advertisers who are newly registered and have made their first payment.
@@ -17,7 +17,7 @@ The payment status of advertisers can be classified into four categories:
 3.	**Churn**: Advertisers who have made payments in the past but have not made any recent payment.
 4.	**Resurrect**: Advertisers who have not made a recent payment but may have made a previous payment and have made a payment again recently.
  
- ## **Status Transition Rules**
+ ### **Status Transition Rules**
 The status of an advertiser can transition based on whether or not a payment has been made on a specific day (denoted as "T"). The transitions follow these rules:
 
 | #  | **Current Status** | **Updated Status** | **Payment on Day T** |
@@ -38,7 +38,7 @@ The status of an advertiser can transition based on whether or not a payment has
   - If the previous status was **NEW**, **EXISTING**, or **RESURRECT**, the updated status will be **EXISTING**.
 
 ---
-### **Solution**
+## **Solution**
 ```sql
 SELECT 
     COALESCE(a.user_id, dp.user_id) AS user_id, 

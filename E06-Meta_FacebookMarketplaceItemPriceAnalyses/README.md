@@ -1,18 +1,18 @@
 # **Facebook Marketplace Item Price Analyses**
 
-### **Problem Overview**
+## **Problem Overview**
 Your Product Manager of Facebook Marketplace wants to understand how items are priced across cities.
 
 *Tables:*
 
 *Listings(listing_id, category, price, city, user_id)*
 
-### **Question 1**
+---
+## **Question 1**
 
 Can you find the average price of items listed in each category on Facebook Marketplace? We want to understand the pricing trends across different categories.
 
-
-### **Solution**
+## **Solution**
 ```sql
 SELECT
   category, 
@@ -20,11 +20,13 @@ SELECT
 FROM Listings
 GROUP BY category;
 ```
-### **Question 2**
+
+---
+## **Question 2**
 
 Which city has the lowest average price? This will help us identify the most affordable cities for buyers.
 
-### **Solution**
+## **Solution**
 ```sql
 SELECT
   city, 

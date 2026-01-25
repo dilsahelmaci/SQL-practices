@@ -1,6 +1,6 @@
 # **Card Launch Success**
 
-### **Problem Overview**
+## **Problem Overview**
 Your team at JPMorgan Chase is soon launching a new credit card. You are asked to estimate how many cards you'll issue in the first month.
 
 Before you can answer this question, you want to first get some perspective on how well new credit card launches typically do in their first month.
@@ -11,7 +11,7 @@ Write a query that outputs the name of the credit card, and how many cards were 
 
 ---
 
-### **Solution**
+## **Solution**
 ```sql
 WITH cards_ranked AS (
   SELECT

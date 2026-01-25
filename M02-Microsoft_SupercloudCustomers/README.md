@@ -1,6 +1,6 @@
 # **Microsoft Azure Supercloud Customer**
 
-### **Problem Overview**
+## **Problem Overview**
 
 A Microsoft Azure Supercloud customer is defined as a customer who has purchased at least one product from every product category listed in the products table.
 
@@ -9,7 +9,7 @@ Write a query that identifies the customer IDs of these Supercloud customers.
 <img width="353" alt="Screenshot 2025-03-29 at 11 08 22" src="https://github.com/user-attachments/assets/608df7ae-68cc-4873-aecc-88caa1fba627" />
 
 ---
-### **Solution**
+## **Solution**
 ```sql
 WITH supercloud_customers AS (
     SELECT 

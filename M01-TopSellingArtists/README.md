@@ -1,6 +1,6 @@
 # **Ranking Top Revenue-Generating Artists by Genre**
 
-### **Problem Overview**
+## **Problem Overview**
 
 As the lead data analyst for a prominent music event management company, you have been entrusted with a dataset containing concert revenue and detailed information about various artists.
 
@@ -9,7 +9,8 @@ Your mission is to unlock valuable insights by analyzing the concert revenue dat
 Write a query to rank the artists within each genre based on their revenue per member and extract the top revenue-generating artist from each genre. Display the output of the artist name, genre, concert revenue, number of members, and revenue per band member, sorted by the highest revenue per member within each genre.
 <img width="954" alt="image" src="https://github.com/user-attachments/assets/ed054596-66a7-45ce-8cef-fb5eda3e5869" />
 
-### **Solution**
+---
+## **Solution**
 ```sql
 WITH ranked_artists AS (
     SELECT
