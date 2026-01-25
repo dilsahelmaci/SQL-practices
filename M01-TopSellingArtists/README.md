@@ -1,6 +1,7 @@
 # **Ranking Top Revenue-Generating Artists by Genre**
 
-## **Problem Overview**
+### **Problem Overview**
+
 As the lead data analyst for a prominent music event management company, you have been entrusted with a dataset containing concert revenue and detailed information about various artists.
 
 Your mission is to unlock valuable insights by analyzing the concert revenue data and identifying the top revenue-generating artists within each music genre.
@@ -8,8 +9,7 @@ Your mission is to unlock valuable insights by analyzing the concert revenue dat
 Write a query to rank the artists within each genre based on their revenue per member and extract the top revenue-generating artist from each genre. Display the output of the artist name, genre, concert revenue, number of members, and revenue per band member, sorted by the highest revenue per member within each genre.
 <img width="954" alt="image" src="https://github.com/user-attachments/assets/ed054596-66a7-45ce-8cef-fb5eda3e5869" />
 
-# **Solution**
-**Final Query**
+### **Solution**
 ```sql
 WITH ranked_artists AS (
     SELECT
@@ -35,7 +35,7 @@ FROM ranked_artists
 WHERE rank_in_genre = 1      -- Select only the top-ranked artist(s) per genre
 ORDER BY revenue_per_member DESC; -- Sort by highest revenue per member
 ```
-### Breakdown of the Query
+### **Breakdown of the Query**
 1. **Ranking Artists per Genre:**
    - The `DENSE_RANK()` function ranks artists within their genre based on revenue per band member in descending order.
    - The `PARTITION BY genre` ensures ranking is done separately for each genre.

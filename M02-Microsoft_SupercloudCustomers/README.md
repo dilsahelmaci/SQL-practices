@@ -1,6 +1,7 @@
 # **Microsoft Azure Supercloud Customer**
 
-## **Problem Overview**
+### **Problem Overview**
+
 A Microsoft Azure Supercloud customer is defined as a customer who has purchased at least one product from every product category listed in the products table.
 
 Write a query that identifies the customer IDs of these Supercloud customers.
@@ -8,8 +9,7 @@ Write a query that identifies the customer IDs of these Supercloud customers.
 <img width="353" alt="Screenshot 2025-03-29 at 11 08 22" src="https://github.com/user-attachments/assets/608df7ae-68cc-4873-aecc-88caa1fba627" />
 
 ---
-# **Solution**
-**Final Query**
+### **Solution**
 ```sql
 WITH supercloud_customers AS (
     SELECT 
@@ -26,7 +26,7 @@ SELECT customer_id
 FROM supercloud_customers
 WHERE product_count = (SELECT COUNT(DISTINCT product_category) FROM products);  -- Compare each customer's count with the total number of unique categories
 ```
-### Breakdown of the Query
+### **Breakdown of the Query**
 1. **Identifying Unique Product Categories per Customer (using CTE)**:
    - The `supercloud_customers` CTE calculates how many distinct product categories each customer has purchased from.
    - It joins the `customer_contracts` table, which records customer purchases, with the `products` table to retrieve category details.

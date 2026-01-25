@@ -1,6 +1,6 @@
 # **User Status Classification for Facebook Advertisers**
 
-## **Problem Overview**
+### **Problem Overview**
 
 You are provided with two tables:
 
@@ -38,8 +38,7 @@ The status of an advertiser can transition based on whether or not a payment has
   - If the previous status was **NEW**, **EXISTING**, or **RESURRECT**, the updated status will be **EXISTING**.
 
 ---
-# **Solution**
-**Final Query**
+### **Solution**
 ```sql
 SELECT 
     COALESCE(a.user_id, dp.user_id) AS user_id, 
@@ -55,7 +54,7 @@ FULL OUTER JOIN daily_pay AS dp
 ORDER BY user_id;
 ```
 
-## **Query Overview**
+### **Query Overview**
 
 This SQL query is written to classify users into different statuses (CHURN, RESURRECT, EXISTING, NEW) based on their payment activity. It combines data from two tables:
 - **`advertiser (a)`**: Contains user information and their current status (NEW, EXISTING, CHURN, etc.).

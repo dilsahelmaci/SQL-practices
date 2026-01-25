@@ -1,6 +1,7 @@
 # **Days Between First and Last Post in 2021**
 
-## **Problem Overview**
+### **Problem Overview**
+
 Given a table of Facebook posts, for each user who posted at least twice in 2021, write a query to find the number of days between each user’s first post of the year and last post of the year in the year 2021. Output the user and the number of days between their first and last post.
 
 <img width="1027" alt="image" src="https://github.com/user-attachments/assets/0c8aadb9-32d5-4833-8bb1-98dfe980d0bb" />
@@ -8,8 +9,7 @@ Given a table of Facebook posts, for each user who posted at least twice in 2021
 <img width="309" alt="image" src="https://github.com/user-attachments/assets/ea7becec-cfe6-4620-8e2e-0ea9be3af4df" />
 
 ---
-# **Solution**
-**Final Query**
+### **Solution**
 ```sql
 SELECT
   user_id,
@@ -19,7 +19,7 @@ WHERE DATE_PART('year', post_date) = 2021
 GROUP BY user_id
 HAVING COUNT(post_id) > 1;
 ```
-### Query Breakdown
+### **Query Breakdown**
 1. **Filtering for 2021**
    ```sql
    WHERE DATE_PART('year', post_date) = 2021
