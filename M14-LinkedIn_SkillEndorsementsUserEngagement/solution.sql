@@ -10,6 +10,7 @@ LEFT JOIN fct_skill_endorsements e
   ON e.user_id = u.user_id
  AND e.endorsement_date >= DATE '2024-07-01'
  AND e.endorsement_date <  DATE '2024-08-01';
+
 -- Question 2
 -- Alternative approach 1 
 WITH per_user AS (
